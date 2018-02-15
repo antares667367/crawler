@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1faad291-dc56-47ed-94c9-fcc1342c9efe" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/fn/bin.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/fn/check_cve.py" />
+      <change beforePath="$PROJECT_DIR$/.db" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/checksyscve.py" afterPath="$PROJECT_DIR$/checksyscve.py" />
+      <change beforePath="$PROJECT_DIR$/classes/Colors.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/Debug.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/Files.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/Info.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/checkvuln.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/db.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/listvuln.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/menu.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/scanner.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/scratch.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/tdb.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/classes/test.db" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/petit_snack.db" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/activate" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/activate.csh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/activate.fish" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/easy_install" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/easy_install-3.6" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/pip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/pip3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/pip3.6" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/python" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/python3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/bin/python3.6" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/beautifulsoup4-4.6.0.dist-info/INSTALLER" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/easy_install.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pickleDB-0.6.2.egg-info/dependency_links.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip-9.0.1.dist-info/INSTALLER" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip-9.0.1.dist-info/WHEEL" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/__main__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/html5lib/filters/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/packaging/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/packaging/_compat.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/packaging/_structures.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/packaging/specifiers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/packaging/utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/packaging/version.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/contrib/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/basecommand.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/baseparser.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/cmdoptions.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/completion.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/download.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/freeze.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/hash.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/help.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/install.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/list.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/search.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/show.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/uninstall.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/commands/wheel.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/compat/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/compat/dictconfig.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/download.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/exceptions.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/index.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/locations.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/models/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/models/index.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/operations/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/operations/freeze.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/pep425tags.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/req/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/req/req_file.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/req/req_install.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/req/req_set.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/req/req_uninstall.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/status_codes.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/appdirs.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/build.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/deprecation.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/encoding.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/filesystem.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/hashes.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/logging.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/outdated.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/setuptools_build.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/utils/ui.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/vcs/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/vcs/bazaar.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/vcs/git.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/vcs/mercurial.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/vcs/subversion.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pip/wheel.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources-0.0.0.dist-info/DESCRIPTION.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources-0.0.0.dist-info/METADATA" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources-0.0.0.dist-info/RECORD" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources-0.0.0.dist-info/WHEEL" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources-0.0.0.dist-info/metadata.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources/_vendor/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources/_vendor/packaging/__about__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources/_vendor/packaging/markers.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources/_vendor/packaging/requirements.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources/_vendor/pyparsing.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/pkg_resources/extern/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools-20.7.0.dist-info/DESCRIPTION.rst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools-20.7.0.dist-info/METADATA" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools-20.7.0.dist-info/RECORD" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools-20.7.0.dist-info/dependency_links.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools-20.7.0.dist-info/entry_points.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools-20.7.0.dist-info/metadata.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools-20.7.0.dist-info/top_level.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/archive_util.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/alias.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/bdist_egg.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/bdist_rpm.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/bdist_wininst.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/build_ext.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/build_py.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/develop.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/easy_install.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/egg_info.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/install.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/install_egg_info.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/install_lib.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/install_scripts.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/register.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/rotate.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/saveopts.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/sdist.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/setopt.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/test.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/upload.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/command/upload_docs.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/depends.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/dist.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/extension.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/extern/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/launch.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/lib2to3_ex.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/msvc9_support.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/package_index.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/py26compat.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/py27compat.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/py31compat.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/sandbox.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/script (dev).tmpl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/script.tmpl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/site-patch.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/ssl_support.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/unicode_utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/version.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/setuptools/windows_support.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib/python3.6/site-packages/tests/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/lib64" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/pyvenv.cfg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/CacheControl-0.11.5-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/chardet-2.3.0-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/colorama-0.3.7-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/distlib-0.2.2-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/html5lib-0.999-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/ipaddress-0.0.0-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/lockfile-0.12.2-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/packaging-16.6-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/pip-8.1.1-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/pkg_resources-0.0.0-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/progress-1.2-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/pyparsing-2.0.3-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/retrying-1.3.3-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/six-1.10.0-py2.py3-none-any.whl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/virtuelle_umgebung/share/python-wheels/wheel-0.29.0-py2.py3-none-any.whl" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/cRAWleR$checksyscve.coverage" NAME="checksyscve Coverage Results" MODIFIED="1518598137475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cRAWleR$scanner.coverage" NAME="scanner Coverage Results" MODIFIED="1518597664591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
+    <SUITE FILE_PATH="coverage/cRAWleR$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1518615066915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classes" />
+    <SUITE FILE_PATH="coverage/cRAWleR$menu.coverage" NAME="menu Coverage Results" MODIFIED="1518598083842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="debug.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fn/debug.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fn/info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fn/color.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fn/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1462">
+              <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bin.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fn/bin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seek.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fn/seek.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="check_cve.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fn/check_cve.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.db" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.db">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fn/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_debug</find>
+      <find>_info</find>
+      <find>actual</find>
+      <find>inspektor</find>
+      <find>akten</find>
+      <find>akte</find>
+      <find>o_osi</find>
+      <find>root</find>
+      <find>self.debug</find>
+      <find>filename</find>
+      <find>Kamarad</find>
+      <find>etikett</find>
+      <find>aktuelle</find>
+      <find>kamaraden</find>
+      <find>daten_bank_path</find>
+      <find>komraden</find>
+      <find>datenbank</find>
+      <find>self.debuggen</find>
+      <find>cveParser</find>
+      <find>vendorParser</find>
+      <find>self.cve</find>
+      <find>kamarad</find>
+      <find>K</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>debuggen</replace>
+      <replace>anzeigen</replace>
+      <replace>aktuelle</replace>
+      <replace>kamarad_inspektor</replace>
+      <replace>kamaraden</replace>
+      <replace>kamarad</replace>
+      <replace>stadt</replace>
+      <replace>__root</replace>
+      <replace>self.debuggen</replace>
+      <replace>hash</replace>
+      <replace>actual</replace>
+      <replace>bins</replace>
+      <replace>db_path</replace>
+      <replace>self.database</replace>
+      <replace>Q</replace>
+      <replace>database</replace>
+      <replace>self.debug</replace>
+      <replace>cve_parser</replace>
+      <replace>vendor_parser</replace>
+      <replace>bin</replace>
+      <replace>BIN</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/classes/test_bidon.py" />
+        <option value="$PROJECT_DIR$/menu.py" />
+        <option value="$PROJECT_DIR$/classes/bidon.py" />
+        <option value="$PROJECT_DIR$/classes/db.py" />
+        <option value="$PROJECT_DIR$/tools/Files.py" />
+        <option value="$PROJECT_DIR$/checksyscve.py" />
+        <option value="$PROJECT_DIR$/classes/tdb.py" />
+        <option value="$PROJECT_DIR$/classes/menu.py" />
+        <option value="$PROJECT_DIR$/classes/scanner.py" />
+        <option value="$PROJECT_DIR$/classes/scratch.py" />
+        <option value="$PROJECT_DIR$/stasi/farben.py" />
+        <option value="$PROJECT_DIR$/stasi/scratch.py" />
+        <option value="$PROJECT_DIR$/stasi/Ausweis.py" />
+        <option value="$PROJECT_DIR$/stasi/suche.py" />
+        <option value="$PROJECT_DIR$/stasi/datenbank.py" />
+        <option value="$PROJECT_DIR$/stasi/debuggen.py" />
+        <option value="$PROJECT_DIR$/stasi/informationen.py" />
+        <option value="$PROJECT_DIR$/stasi/volkpolizei.py" />
+        <option value="$PROJECT_DIR$/stasi/kamarad.py" />
+        <option value="$PROJECT_DIR$/stasi/ausweis.py" />
+        <option value="$PROJECT_DIR$/fn/color.py" />
+        <option value="$PROJECT_DIR$/fn/debug.py" />
+        <option value="$PROJECT_DIR$/fn/info.py" />
+        <option value="$PROJECT_DIR$/fn/database.py" />
+        <option value="$PROJECT_DIR$/fn/seek.py" />
+        <option value="$PROJECT_DIR$/fn/check_cve.py" />
+        <option value="$PROJECT_DIR$/fn/main.py" />
+        <option value="$PROJECT_DIR$/fn/bin.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1" />
+    <option name="y" value="-27" />
+    <option name="width" value="1922" />
+    <option name="height" value="1013" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cRAWleR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cRAWleR" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cRAWleR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cRAWleR" type="462c0819:PsiDirectoryNode" />
+              <item name="fn" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/classes" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.scratch">
+    <configuration name="checksyscve" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cRAWleR" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/checksyscve.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cRAWleR" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/menu.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="scanner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cRAWleR" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/scanner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cRAWleR" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classes/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python.menu" />
+      <item index="1" class="java.lang.String" itemvalue="Python.scratch" />
+      <item index="2" class="java.lang.String" itemvalue="Python.scanner" />
+      <item index="3" class="java.lang.String" itemvalue="Python.checksyscve" />
+    </list>
+    <recent_temporary>
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.scratch" />
+        <item index="1" class="java.lang.String" itemvalue="Python.checksyscve" />
+        <item index="2" class="java.lang.String" itemvalue="Python.menu" />
+        <item index="3" class="java.lang.String" itemvalue="Python.scanner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1faad291-dc56-47ed-94c9-fcc1342c9efe" name="Default" comment="" />
+      <created>1518525344259</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518525344259</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-27" width="1922" height="948" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43786982" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="0" y="0" width="430" height="748" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781065" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TAR - add class DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="TAR - add class DB" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/menu.py" />
+    <entry file="file://$PROJECT_DIR$/classes/scanner.py" />
+    <entry file="file://$PROJECT_DIR$/classes/tdb.py" />
+    <entry file="file://$PROJECT_DIR$/classes/scratch.py" />
+    <entry file="file://$PROJECT_DIR$/classes/listvuln.py" />
+    <entry file="file://$PROJECT_DIR$/classes/Colors.py" />
+    <entry file="file://$PROJECT_DIR$/classes/Info.py" />
+    <entry file="file://$PROJECT_DIR$/classes/Debug.py" />
+    <entry file="file://$PROJECT_DIR$/classes/db.py" />
+    <entry file="file://$PROJECT_DIR$/tools/Colors.py" />
+    <entry file="file://$PROJECT_DIR$/tools/Debug.py" />
+    <entry file="file://$PROJECT_DIR$/classes/scratch.py" />
+    <entry file="file://$PROJECT_DIR$/classes/menu.py" />
+    <entry file="file://$PROJECT_DIR$/tools/Files.py" />
+    <entry file="file://$PROJECT_DIR$/main.py" />
+    <entry file="file://$PROJECT_DIR$/classes/test_bidon.py" />
+    <entry file="file://$PROJECT_DIR$/classes/bidon.py" />
+    <entry file="file://$PROJECT_DIR$/tools/Colors.py" />
+    <entry file="file://$PROJECT_DIR$/tools/Debug.py" />
+    <entry file="file://$PROJECT_DIR$/tools/Files.py" />
+    <entry file="file://$PROJECT_DIR$/checksyscve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/db.py" />
+    <entry file="file://$PROJECT_DIR$/classes/test.db" />
+    <entry file="file://$PROJECT_DIR$/classes/checkvuln.py" />
+    <entry file="file://$PROJECT_DIR$/classes/listvuln.py" />
+    <entry file="file://$PROJECT_DIR$/classes/Colors.py" />
+    <entry file="file://$PROJECT_DIR$/classes/Info.py" />
+    <entry file="file://$PROJECT_DIR$/classes/Debug.py" />
+    <entry file="file://$PROJECT_DIR$/classes/tdb.py" />
+    <entry file="file://$PROJECT_DIR$/classes/menu.py" />
+    <entry file="file://$PROJECT_DIR$/classes/scratch.py" />
+    <entry file="file://$PROJECT_DIR$/classes/scanner.py" />
+    <entry file="file://$PROJECT_DIR$/yayaya.db" />
+    <entry file="file://$PROJECT_DIR$/stasi/Files.py" />
+    <entry file="file://$PROJECT_DIR$/stasi/checkvuln.py" />
+    <entry file="file://$PROJECT_DIR$/stasi/listvuln.py" />
+    <entry file="file://$PROJECT_DIR$/kamaraden" />
+    <entry file="file://$PROJECT_DIR$/fn/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kamaraden.datenbank" />
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/color.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/seek.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/debug.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="11" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/check_cve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fn/bin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
