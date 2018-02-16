@@ -11,6 +11,7 @@ from .database import Database  # db
 from .debug import Debug  # debug
 from .info import Info  # info
 from .seek import Scanner  # scanner
+from .check_cve import Cve
 
 
 class Main:
@@ -77,13 +78,16 @@ class Main:
         display optins
         """
         # directives from Moscow
-        print("Usage: ./checksysvce "
-              "-u (--updatedatabase) [-f database_filepath] | # pop database"
-              "-c (--checkvuln) [-f binary_filepath] | # list found"
-              "-q (--query) [-f binary_filepath] | # query by attribute"
-              "-Q (--quit) | # exit the script"
-              "-h (--help) | # display this"
-              "-l (--listvuln) [-f binary_pathfile] | # list all")
+        print("Usage: ./checksysvce \n"
+              "p3sbc Python3 simple bin crawler (finds bin over the system and get corresponding CVEs) "
+              "-u (--updatedatabase) [-f database_filepath] | # pop database\n"
+              "-c (--checkvuln) [-f database_filepath] | # list found\n"
+              "-q (--query) [-f database_filepath] | # query by attribute\n"
+              "-Q (--quit) | # exit the script\n"
+              "-h (--help) | # display this\n"
+              "-l (--listvuln) [-f binary_pathfile] | # list all\n"
+              "-s (--single) | # EXPERIMENTAL / use API for single bin (no hash or path ,"
+              " as the bin can be on the system or not.Only CVEs are displayed if any)\n")
 
     def parse_options(self):
         """
@@ -102,18 +106,26 @@ class Main:
         elif "-c" in self.actual:
             for sta in db._search('state', 'found'):
                 self.debug.log(sta, "database.py", self.info.line())
+        elif "-c" in self.actual:
+            for sta in db._search('state', 'found'):
+                self.debug.log(sta, "database.py", self.info.line())
         elif "-q" in self.actual:
             att = input("attribute [name,hash,state] ex: name \n > ")
             val = input("attribute value ex: found \n > ")
             for sta in db._search(str(att), str(val)):
                 self.debug.log(sta, "database.py", self.info.line())
+        elif "-s" in self.actual:
+            bin = input("binary name \n > ")
+            version = input("binary version (if any , othrwise type None)\n > ")
+            cve = Cve().search(bin, version)
+            self.debug.log({"name": bin, "version": version, "cve": cve, "state": "found" if cve else "not found"})
 
     def menu(self):
         """
         listen to Moscow's orders and direct actions
         """
         try:
-            opts, args = getopt.getopt(self.args, "hulcf:qQ")
+            opts, args = getopt.getopt(self.args, "hulcf:qQs")
         except getopt.GetoptError as err:
             # print help information and exit:
             print(err)  # will print something like "option -a not recognized"
@@ -130,6 +142,8 @@ class Main:
             elif o in ("-l", "--listvuln"):
                 self.actual = o
             elif o in ("-q", "--query"):
+                self.actual = o
+            elif o in ("-s", "--single"):
                 self.actual = o
             elif o in "-f":
                 if a is not None:
