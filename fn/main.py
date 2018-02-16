@@ -1,14 +1,16 @@
-import getopt, sys
-import os
 import fnmatch
+import getopt
+import os
+import sys
+
 import magic
 
-from .database import Database  # db
-from .seek import Scanner  # scanner
-from .info import Info  # info
-from .debug import Debug  # debug
-from .color import Colors as F
 from .bin import Bin
+from .color import Colors as F
+from .database import Database  # db
+from .debug import Debug  # debug
+from .info import Info  # info
+from .seek import Scanner  # scanner
 
 
 class Main:
@@ -23,9 +25,9 @@ class Main:
         self.debug = Debug(internal_debug=True, color_output=True)  # set debug class
         self.debug.setLogger("main.py")  # set logger with file name
         self.args = args  # get args from main script
-        self.daten = Scanner().os_probing()  # probe os
-        self.system = self.daten["system"]
-        self.bin = self.daten["bin_type"]
+        self.osfp = Scanner().os_probing()  # probe os
+        self.system = self.osfp["system"]
+        self.bin = self.osfp["bin_type"]
 
     def out(self):
         """
@@ -40,14 +42,14 @@ class Main:
         :return:
         """
 
-        if "Linux" or "LINUX" or "Unix" or "UNIX" or "darwin" in self.system:
+        if "Linux" or "Unix" or "darwin" in self.system:
             self.root_scan = "/"
-        elif "win32" or "win64" in self.system:  # todo check real name in test
+        elif "win32" or "win64" in self.system:
             self.root_scan = "C:"
 
     def inspect(self, db):
         """
-        search the osfor bins(bin files)
+        search the os for bin files
         :return:
         """
         db = db  # get db
@@ -61,55 +63,57 @@ class Main:
                 if os.path.isfile(os.path.join(__root, bin)) and not os.path.islink(os.path.join(__root, bin)):
                     try:
                         if self.bin in magic.from_file(os.path.join(__root, bin)):
-                            BIN = Bin(db, bin, os.path.join(__root, bin))
-                            print(BIN.show())
-                            # BIN.aufzeichnung()
-                            # self.debuggen.log(
-                            #     "{}{}{}".format(F.OKGREEN, os.path.join(__root, "{} {}".format(bin, BIN.cve)), F.END),
-                            #     OK, self.info.line())
-                    except Exception as e:
-                        self.debug.log("{}{} {}{}".format(F.FAIL, e.args, bin, F.END), ERR, self.info.line())
+                            BIN = Bin(db, bin, os.path.join(__root, bin))  # create object
+                            self.debug.log(BIN.show(), "inspect()", self.info.line())  # display for debug
+                            BIN.rec_in_db()  # the object records itself in db
+                            del BIN  # once done, the object deletes itseflf to free up ram
+                    except Exception as e:  # raise error if any
+                        self.debug.log("{}{} {}{}".format(F.FAIL, e, bin, F.END), ERR, self.info.line())
                     else:
                         pass
 
     def usage(self):
         """
-        display Moscow's instructions
+        display optins
         """
         # directives from Moscow
         print("Usage: ./checksysvce "
-              "-u (--updatedatabase) [-f database_filepath] | "
-              "-c (--checkvuln) [-f binary_filepath] | "
-              "-q (--quiery) [-f binary_filepath] | "
-              "-Q (--quit) | "
-              "-h (--help) | "
-              "-l (--listvuln) [-f binary_pathfile]")
+              "-u (--updatedatabase) [-f database_filepath] | # pop database"
+              "-c (--checkvuln) [-f binary_filepath] | # list found"
+              "-q (--query) [-f binary_filepath] | # query by attribute"
+              "-Q (--quit) | # exit the script"
+              "-h (--help) | # display this"
+              "-l (--listvuln) [-f binary_pathfile] | # list all")
 
     def parse_options(self):
         """
         parse options from checksysvce
         """
-        if "-u" in self.actual:
 
-            db_path = os.path.dirname(self.db_path)  # strip given path (-f) to assess the path
-            db_name = os.path.splitext(self.db_path)[0]  # and the filename (without extension)
-            db = Database(db_path, "{}.db".format(db_name))  # the sys to be searched
+        db_path = os.path.dirname(self.db_path)  # strip given path (-f) to assess the path
+        db_name = os.path.splitext(self.db_path)[0]  # and the filename (without extension)
+        db = Database(db_path, "{}.db".format(db_name))  # the sys to be searched
+        if "-u" in self.actual:
             db.insert_ko("os",
-                         self.daten)  # insert os fingerprint in db
+                         self.osfp)  # insert os fingerprint in db
             self.inspect(db)  # inspect sys for bins
-        elif "-c" in self.actual:
-            print("NA")
-        elif "-q" in self.actual:
-            print("NA")
         elif "-l" in self.actual:
-            print("NA")
+            db.display()
+        elif "-c" in self.actual:
+            for sta in db._search('state', 'found'):
+                self.debug.log(sta, "database.py", self.info.line())
+        elif "-q" in self.actual:
+            att = input("attribute [name,hash,state] ex: name \n > ")
+            val = input("attribute value ex: found \n > ")
+            for sta in db._search(str(att), str(val)):
+                self.debug.log(sta, "database.py", self.info.line())
 
     def menu(self):
         """
         listen to Moscow's orders and direct actions
         """
         try:
-            opts, args = getopt.getopt(self.args, "hulcf:q:Q")
+            opts, args = getopt.getopt(self.args, "hulcf:qQ")
         except getopt.GetoptError as err:
             # print help information and exit:
             print(err)  # will print something like "option -a not recognized"

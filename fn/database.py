@@ -1,7 +1,9 @@
 import os
-from tinydb import TinyDB, Query
-from .info import Info
+
+from tinydb import TinyDB, where
+
 from .debug import Debug
+from .info import Info
 
 
 class Database:
@@ -11,6 +13,10 @@ class Database:
         :param path:
         :param name:
         """
+        self.info = Info(enabled=True)  # set info -(line number for debug)
+        self.debug = Debug(internal_debug=True, color_output=True)  # set debug class
+        self.debug.setLogger("database.py")  # set logger with file name
+        self.db_path = os.path.join(path, name)
         try:
             self.database = TinyDB(os.path.join(path, name))
         except Exception as e:
@@ -19,7 +25,7 @@ class Database:
         else:
             pass
 
-    def insert(self, key, version, _hash, cve):
+    def insert(self, key, version, _hash, cve, state):
         """
         Inserts in tinyDB
         :param key:
@@ -29,7 +35,7 @@ class Database:
         :return:
         """
         try:
-            self.database.insert({'name': key, 'version': version, 'hash': _hash, 'cve': cve})
+            self.database.insert({'name': key, 'version': version, 'hash': _hash, 'cve': cve, 'state': state})
         except Exception as e:
             print(e.args)
             pass
@@ -69,24 +75,23 @@ class Database:
         :return:
         """
         try:
+            l = len(self.database)
+            self.debug.log("items in {} {}".format(self.db_path, l), "database.py", self.info.line())
             for item in self.database:
-                print(item)
+                self.debug.log("{}".format(item), "item", self.info.line())
         except Exception as e:
             print(e.args)
             pass
         else:
             pass
 
-    def search(self, request):
+    def _search(self, attrib: str, attrib_val: str):
         """
         Search in tinyDB
         :return: results
         """
         try:
-            Q = Query()
-            self.database.search(Q.name == request)
+            return self.database.search(where(attrib) == attrib_val)
         except Exception as e:
             print(e.args)
-            pass
-        else:
             pass

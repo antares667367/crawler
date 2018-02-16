@@ -8,6 +8,7 @@ class Bin:
     """
     represents a binary
     """
+
     def __init__(self, database, name, path, version=None):
         """
         init object
@@ -21,14 +22,21 @@ class Bin:
         self.debug = Debug(internal_debug=True, color_output=True)  # set debug class
         self.debug.setLogger("bin.py")  # set logger with file name
         self.cve = Cve().search(name, version)
+        self.summary = {"bin_name": self.name, "bin_path": self.path,
+                        "state": "found" if self.cve else "not found"}
+
+    def __del__(self):
+        self.debug.log("{} removed from ram".format(self.name), "bin.py", self.info.line())
 
     def rec_in_db(self):
         """
         the bin infos are recorded in db
         :return:
         """
-        self.database.insert(self.name, self.version, self.hash,
-                             self.cve)  # record in db
+        self.database.insert(
+            self.path,
+            self.version, self.hash,
+            self.cve,"found" if self.cve else "not found")  # record in db
 
     def hash(self, path):
         """
@@ -43,4 +51,5 @@ class Bin:
             return h.hexdigest()
 
     def show(self):
-        return {"name": self.name, "path": self.path, "hash": self.hash, "version": self.version, "cve": self.cve}
+        return {"name": self.name, "path": self.path, "hash": self.hash, "version": self.version, "cve": self.cve,
+                "summary": self.summary}

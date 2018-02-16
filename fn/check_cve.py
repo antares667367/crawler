@@ -1,10 +1,9 @@
-import asyncio
-
 import bs4 as BeautifulSoup
 import requests
 
 from .debug import Debug
 from .info import Info
+from .color import Colors as F
 
 
 class Cve:
@@ -28,41 +27,48 @@ class Cve:
         }
 
     def search(self, bin, version=None):
-        self.params['product'] = bin
+        self.params['product'] = bin # set product (the actual binary)
         if version:
-            self.params['version'] = version
+            self.params['version'] = version # set version if any if any
         try:
-            cve_list = self.__make_search()
-            self.debug.log(cve_list,"cve list",self.info.line())
-        except Exception as e:
+            cve_list = self.__make_search() # do search
+            self.debug.log(cve_list,"cve list",self.info.line()) # print for debug
+        except Exception as e: # raise err if any
             self.debug.log(e.args, "ERR", self.info.line())
         self.params = {
             'vendor': '',
             'product': '',
             'version': ''
-        }
-        return cve_list
+        } # params fr the api
+        return cve_list # return list
 
-    def __make_search(self):
+    def __make_search(self):#make the actual search
         """
         Make a search
         :return:
         """
-        page = requests.get(self.url_search[0], self.params)
-        page.encoding = 'utf-8'
-        parser = BeautifulSoup.BeautifulSoup(page.content, "lxml")
-        table = parser.find("table", attrs={'class': "searchresults"})
-        if table:
-            if table.has_attr('id') and table.get('id') == "vulnslisttable":
-                return self.__parse_cve_list(table)
+        OK = "{}{}{}".format(F.OKGREEN, "OK", F.END) # set vars for display TODO integrate in Colors
+        ERR = "{}{}{}".format(F.FAIL, "ERR", F.END)
+        page = requests.get(self.url_search[0], self.params) # request the api
+        page.encoding = 'utf-8' # set encoding of the page
+        parser = BeautifulSoup.BeautifulSoup(page.content, "lxml") # use lxml parser
+        table = parser.find("table", attrs={'class': "searchresults"}) # get table if any
+        try:
+            if table:
+                if table.has_attr('id') and table.get('id') == "vulnslisttable":
+                    # if there is only one CVE or none , this function will be triggered
+                    return self.__parse_cve_list(table) # return table content in both cases
+                else:
+                    # else that one will
+                    return self.__parse_vendor_list(table)
             else:
-                return self.__parse_vendor_list(table)
-        else:
-            return []
+                return []
+        except Exception as e: # raise error if any
+            self.debug.log("{}{} {}{}".format(F.FAIL, e, bin, F.END), ERR, self.info.line())
 
     def __parse_cve_list(self, cve_parser):
         """
-        parse cve list
+        parse cve list, triggered if one CVE or None
         :param cve_parser:
         :return:
         """
@@ -74,12 +80,13 @@ class Cve:
 
     def __parse_vendor_list(self, vendor_parser):
         """
-        parse vendor
+        parse vendor, trigerred if multiple CVEs
         :param vendor_parser:
         :return:
         """
         vendors_list = vendor_parser.select('tr')[1:]
         cve_list = []
+        page = ""
         for vendor in vendors_list:
             nbr_vuln = vendor.select('td.num')
             if nbr_vuln:
@@ -88,8 +95,8 @@ class Cve:
                 nbr_vuln = 0
             if nbr_vuln > 0:
                 link = vendor.select('td a').pop()
-                page.encoding = 'utf-8'
                 page = requests.get(self.url + link.get('href'))
+                page.encoding = 'utf-8'
                 cve_parser = BeautifulSoup.BeautifulSoup(page.content, 'lxml')
                 cve_list += self.__parse_cve_list(cve_parser.find('table', attrs={'id': 'vulnslisttable'}))
         return cve_list
